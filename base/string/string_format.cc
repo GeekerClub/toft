@@ -5,6 +5,8 @@
 
 #include "toft/base/string/string_format.h"
 
+namespace toft {
+
 size_t StringFormatAppendVA(std::string* dst, const char* format, va_list ap) {
     // First try with a small fixed size buffer
     char space[1024];
@@ -70,3 +72,4 @@ std::string StringFormat(const char* format, ...) {
     return result;
 }
 
+} // namespace toft
