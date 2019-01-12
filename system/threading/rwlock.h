@@ -134,7 +134,9 @@ public: // Only for test and debug, should not be used in normal code logical
     {
         // Accessing pthread private data: nonportable but no other way
 #if defined(__GLIBC__)
-#if __GNUC_PREREQ(4, 1)
+#if __GNUC_PREREQ(7, 0)
+        assert(m_lock.__data.__readers != 0);
+#elif __GNUC_PREREQ(4, 1)
         assert(m_lock.__data.__nr_readers != 0);
 #elif __GNUC_PREREQ(3, 4)
         const PthreadRwlock* rwlock =
@@ -152,7 +154,9 @@ public: // Only for test and debug, should not be used in normal code logical
     void AssertWriterLocked() const
     {
 #if defined(__GLIBC__)
-#if __GNUC_PREREQ(4, 1)
+#if __GNUC_PREREQ(7, 0)
+        assert(m_lock.__data.__writers != 0);
+#elif __GNUC_PREREQ(4, 1)
         assert(m_lock.__data.__writer != 0);
 #elif __GNUC_PREREQ(3, 4)
         const PthreadRwlock* rwlock =
@@ -170,7 +174,9 @@ public: // Only for test and debug, should not be used in normal code logical
     void AssertLocked()
     {
 #if defined(__GLIBC__)
-#if __GNUC_PREREQ(4, 1)
+#if __GNUC_PREREQ(7, 0)
+        assert(m_lock.__data.__readers != 0 || m_lock.__data.__writers != 0);
+#elif __GNUC_PREREQ(4, 1)
         assert(m_lock.__data.__nr_readers != 0 || m_lock.__data.__writer != 0);
 #elif __GNUC_PREREQ(3, 4)
         const PthreadRwlock* rwlock =
