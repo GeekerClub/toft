@@ -9,7 +9,7 @@
 #include <inttypes.h>
 #include <iostream>
 
-#include "thirdparty/glog/logging.h"
+#include "glog/logging.h"
 
 namespace toft {
 

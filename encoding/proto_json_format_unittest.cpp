@@ -7,9 +7,9 @@
 #include <stdlib.h>
 #include <limits>
 
-#include "thirdparty/glog/logging.h"
+#include "glog/logging.h"
 #include "thirdparty/google/protobuf/text_format.h"
-#include "thirdparty/gtest/gtest.h"
+#include "gtest/gtest.h"
 #include "thirdparty/jsoncpp/json.h"
 #include "toft/encoding/unittest.pb.h"
 #include "toft/storage/file/file.h"

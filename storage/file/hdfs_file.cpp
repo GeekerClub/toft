@@ -9,7 +9,7 @@
 #include <unistd.h>
 #include <sys/stat.h>
 
-#include "thirdparty/glog/logging.h"
+#include "glog/logging.h"
 #include "toft/base/string/algorithm.h"
 #include "toft/base/unique_ptr.h"
 #include "toft/storage/file/uri_utils.h"

@@ -3,13 +3,14 @@
 #
 # Description:
 
-cc_library(name = 'sharding',
+cc_library(
+    visibility = ['PUBLIC'],name = 'sharding',
            srcs = ['sharding.cc',
                    'fingerprint_sharding.cc',
                    ],
            deps = [
-                   '//toft/base:class_registry',
-                   '//toft/hash:hash',
+                   '//thirdparty/toft/base:class_registry',
+                   '//thirdparty/toft/hash:hash',
                    ],
            link_all_symbols=True,
            )

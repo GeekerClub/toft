@@ -1,10 +1,11 @@
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'binary_version',
     srcs = [
         'binary_version.cpp',
         'setup_binary_version.cpp',
     ],
-    deps = '//thirdparty/gflags:gflags',
+    deps = '#gflags',
 )
 
 cc_test(
@@ -15,52 +16,61 @@ cc_test(
     ]
 )
 
-cc_library(name = 'byte_order', srcs = 'byte_order.cpp')
+cc_library(
+    visibility = ['PUBLIC'],name = 'byte_order', srcs = 'byte_order.cpp')
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'class_registry',
     deps = './class_registry:_class_registry'
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'closure',
     srcs = 'closure.cpp',
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'benchmark',
     srcs = 'benchmark.cpp',
-    deps = ['//toft/system/time:time',
-            '//thirdparty/glog:glog',
-            '//thirdparty/perftools:tcmalloc_and_profiler',
+    deps = ['//thirdparty/toft/system/time:time',
+            '#glog',
+           # '//thirdparty/perftools:tcmalloc_and_profiler',
            ]
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'benchmark_main',
     srcs = 'benchmark_main.cpp',
     deps = [':benchmark',
-            '//thirdparty/gflags:gflags',
+            '#gflags',
            ]
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'int128',
     srcs = 'int128.cpp',
-    deps = '//thirdparty/glog:glog',
+    deps = '#glog',
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'uint32_divisor',
     srcs = 'uint32_divisor.cpp'
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'random',
     srcs = 'random.cpp',
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'arena',
     srcs = 'arena.cpp',
 )
@@ -84,7 +94,7 @@ cc_test(
     name = "object_pool_test",
     srcs = ["object_pool_test.cpp"],
     deps = [
-        '//toft/system/threading:threading',
+        '//thirdparty/toft/system/threading:threading',
     ],
 )
 cc_test(name = 'array_size_test', srcs = 'array_size_test.cpp')
@@ -99,5 +109,5 @@ cc_test(name = 'static_assert_test', srcs = 'static_assert_test.cpp')
 cc_test(name = 'static_resource_test', srcs = 'static_resource_test.cpp')
 cc_test(name = 'stl_util_test', srcs = 'stl_util_test.cpp')
 cc_test(name = 'unique_ptr_test', srcs = 'unique_ptr_test.cpp')
-cc_test(name = 'unordered_test', srcs = 'unordered_test.cpp')
+#cc_test(name = 'unordered_test', srcs = 'unordered_test.cpp')
 

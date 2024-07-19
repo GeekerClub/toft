@@ -1,9 +1,10 @@
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'mime',
     srcs = 'mime.cpp',
     deps = [
-        '//toft/base/string:string',
-        '//thirdparty/glog:glog'
+        '//thirdparty/toft/base/string:string',
+        '#glog'
     ]
 )
 

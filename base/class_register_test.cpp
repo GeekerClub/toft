@@ -2,7 +2,7 @@
 #include "common/base/class_register.h"
 #include "common/base/class_register_test_helper.h"
 #include "common/base/scoped_ptr.h"
-#include "thirdparty/gtest/gtest.h"
+#include "gtest/gtest.h"
 
 // namespace common {
 

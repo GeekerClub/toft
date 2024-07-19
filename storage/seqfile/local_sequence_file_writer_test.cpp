@@ -1,8 +1,8 @@
 // Copyright 2013, For toft authors. All rights reserved.
 // Author: An Qin (anqin.qin@gmail.com)
 //
-#include "thirdparty/glog/logging.h"
-#include "thirdparty/gtest/gtest.h"
+#include "glog/logging.h"
+#include "gtest/gtest.h"
 
 #include "toft/base/scoped_ptr.h"
 #include "toft/base/string/number.h"

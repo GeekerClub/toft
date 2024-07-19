@@ -1,4 +1,5 @@
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'random',
     srcs = [
         'pseudo_random.cpp',

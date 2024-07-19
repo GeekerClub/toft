@@ -1,4 +1,5 @@
 cc_library(
+    visibility = ['PUBLIC'],
     name = '_sync_object',
     srcs = [
         'condition_variable.cpp',
@@ -10,19 +11,21 @@ cc_library(
     ],
     deps = [
         ':_this_thread',
-        '//toft/system:check_error',
-        '//toft/system/time:time',
+        '//thirdparty/toft/system:check_error',
+        '//thirdparty/toft/system/time:time',
         '#pthread'
     ]
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = '_this_thread',
     srcs = 'this_thread.cpp',
     deps = '#pthread',
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = '_thread',
     srcs = [
         'thread.cpp',
@@ -30,12 +33,13 @@ cc_library(
     ],
     deps = [
         ':_this_thread',
-        '//toft/system:check_error',
+        '//thirdparty/toft/system:check_error',
         '#pthread',
     ]
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = '_thread_group',
     srcs = [
         'thread_group.cpp',
@@ -46,6 +50,7 @@ cc_library(
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = '_thread_pool',
     srcs = [
         'thread_pool.cpp'
@@ -54,12 +59,13 @@ cc_library(
         ':_sync_object',
         ':_this_thread',
         ':_thread',
-        '//toft/base:closure',
-        '//toft/system/atomic:atomic'
+        '//thirdparty/toft/base:closure',
+        '//thirdparty/toft/system/atomic:atomic'
     ]
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'threading',
     deps = [
         ':_sync_object',

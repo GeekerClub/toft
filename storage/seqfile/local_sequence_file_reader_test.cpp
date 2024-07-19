@@ -1,8 +1,8 @@
 // Copyright 2013, For toft authors.
 // Author: An Qin (anqin.qin@gmail.com)
 //
-#include "thirdparty/glog/logging.h"
-#include "thirdparty/gtest/gtest.h"
+#include "glog/logging.h"
+#include "gtest/gtest.h"
 
 #include "toft/base/array_size.h"
 #include "toft/storage/file/local_file.h"

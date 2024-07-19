@@ -17,7 +17,7 @@
 
 
 #include "toft/base/string/algorithm.h"
-#include "thirdparty/gflags/gflags.h"
+#include "gflags/gflags.h"
 
 DEFINE_int32(file_op_retry_times, 3, "");
 

@@ -24,8 +24,8 @@
 #include "toft/system/eintr_ignored.h"
 #include "toft/system/time/clock.h"
 
-#include "thirdparty/glog/logging.h"
-#include "thirdparty/glog/raw_logging.h"
+#include "glog/logging.h"
+#include "glog/raw_logging.h"
 
 namespace toft {
 

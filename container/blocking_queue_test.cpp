@@ -6,7 +6,7 @@
 #include <queue>
 #include <string>
 
-#include "thirdparty/gtest/gtest.h"
+#include "gtest/gtest.h"
 #include "toft/base/scoped_ptr.h"
 #include "toft/system/threading/thread.h"
 

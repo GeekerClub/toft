@@ -1,4 +1,5 @@
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'hash',
     deps = [
         ':city',
@@ -11,20 +12,23 @@ cc_library(
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'city',
     srcs = 'city.cpp',
     deps = [
-        '//toft/base:int128',
+        '//thirdparty/toft/base:int128',
         '//thirdparty/cityhash:cityhash',
     ]
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'jenkins',
     srcs = 'jenkins.cpp',
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'fingerprint',
     srcs = [
         'fingerprint32.cpp',
@@ -37,12 +41,14 @@ cc_library(
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'super_fast',
     srcs = 'super_fast.cpp',
 )
 
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'murmur',
     srcs = [
         'murmur/MurmurHash2_64.cpp',
@@ -61,10 +67,11 @@ cc_test(
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'crc32',
     srcs = 'crc32.cpp',
     deps = [
-        '//toft/encoding:encoding',
+        '//thirdparty/toft/encoding:encoding',
     ],
 )
 

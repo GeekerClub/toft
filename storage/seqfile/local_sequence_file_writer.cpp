@@ -6,7 +6,7 @@
 #include <netinet/in.h>
 #include <string.h>
 
-#include "thirdparty/glog/logging.h"
+#include "glog/logging.h"
 #include "toft/base/scoped_ptr.h"
 #include "toft/storage/seqfile/local_sequence_file_reader.h"
 #include "toft/system/time/timestamp.h"

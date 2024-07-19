@@ -10,8 +10,8 @@
 
 #include "toft/system/threading/thread_pool.h"
 #include "toft/system/timer/timer_manager.h"
-#include "thirdparty/gflags/gflags.h"
-#include "thirdparty/glog/logging.h"
+#include "gflags/gflags.h"
+#include "glog/logging.h"
 
 DEFINE_int32(toft_counter_output_interval_in_s, 60,
              "the interval to dump counter statitics");

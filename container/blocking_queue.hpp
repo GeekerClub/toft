@@ -6,7 +6,7 @@
 
 #include <queue>
 
-#include "thirdparty/glog/logging.h"
+#include "glog/logging.h"
 #include "toft/system/threading/condition_variable.h"
 #include "toft/system/threading/mutex.h"
 #include "toft/system/threading/scoped_locker.h"

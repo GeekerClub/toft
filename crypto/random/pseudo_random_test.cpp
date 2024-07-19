@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <time.h>
 
-#include "thirdparty/gtest/gtest.h"
+#include "gtest/gtest.h"
 
 // namespace common {
 

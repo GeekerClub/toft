@@ -1,7 +1,8 @@
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'uuid',
     srcs = 'uuid.cpp',
-    deps = ['//toft/base/string:string'],
+    deps = ['//thirdparty/toft/base/string:string'],
 )
 
 #cc_benchmark(

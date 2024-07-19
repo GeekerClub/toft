@@ -6,9 +6,9 @@
 
 #include "toft/container/counter.h"
 
-#include "thirdparty/gflags/gflags.h"
-#include "thirdparty/glog/logging.h"
-#include "thirdparty/gtest/gtest.h"
+#include "gflags/gflags.h"
+#include "glog/logging.h"
+#include "gtest/gtest.h"
 #include "toft/container/counter_handler.h"
 #include "toft/system/threading/event.h"
 #include "toft/system/threading/this_thread.h"

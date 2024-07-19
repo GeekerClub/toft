@@ -3,7 +3,7 @@
 //
 
 #include "toft/encoding/charset_converter.h"
-#include "thirdparty/gtest/gtest.h"
+#include "gtest/gtest.h"
 
 using namespace toft;
 TEST(CharsetConverter, Empty)

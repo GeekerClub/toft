@@ -1,8 +1,9 @@
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'timer',
     srcs = 'timer_manager.cpp',
     deps = [
-        '//toft/system/threading:threading',
+        '//thirdparty/toft/system/threading:threading',
     ]
 )
 

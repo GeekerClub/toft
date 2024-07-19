@@ -1,4 +1,5 @@
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'http_types',
     srcs = [
         'http_headers.cpp',
@@ -8,20 +9,21 @@ cc_library(
         'http_time.cpp',
     ],
     deps = [
-        '//toft/base/string:string',
-        '//toft/net/uri:url',
-        '//thirdparty/glog:glog'
+        '//thirdparty/toft/base/string:string',
+        '//thirdparty/toft/net/uri:url',
+        '#glog'
     ]
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'http_client',
     srcs = 'http_client.cpp',
     deps = [
         ':http_types',
-        '//toft/net/uri:url',
-        '//toft/system/net:net',
-        '//thirdparty/glog:glog'
+        '//thirdparty/toft/net/uri:url',
+        '//thirdparty/toft/system/net:net',
+        '#glog'
     ]
 )
 

@@ -3,7 +3,7 @@
 
 #include "toft/net/http/http_headers.h"
 #include "toft/net/http/http_message.h"
-#include "thirdparty/gtest/gtest.h"
+#include "gtest/gtest.h"
 
 namespace toft {
 

@@ -1,10 +1,11 @@
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'path',
     srcs = [
         'path.cpp',
         'path_ext.cc'
     ],
-    deps = '//toft/base/string:string',
+    deps = '//thirdparty/toft/base/string:string',
 )
 
 

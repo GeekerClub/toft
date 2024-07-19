@@ -8,8 +8,8 @@
 #include "toft/base/closure.h"
 #include "toft/base/functional.h"
 
-#include "thirdparty/glog/logging.h"
-#include "thirdparty/gtest/gtest.h"
+#include "glog/logging.h"
+#include "gtest/gtest.h"
 
 namespace toft {
 

@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <algorithm>
 
-#include "thirdparty/gtest/gtest.h"
+#include "gtest/gtest.h"
 
 namespace toft {
 

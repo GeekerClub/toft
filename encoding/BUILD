@@ -1,4 +1,5 @@
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'encoding',
     srcs = [
         'ascii.cpp',
@@ -8,22 +9,24 @@ cc_library(
         'shell.cpp',
     ],
     deps = [
-        '//toft/base/string:string',
+        '//thirdparty/toft/base/string:string',
         '//thirdparty/stringencoders:stringencoders'
     ]
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'varint',
     srcs = 'varint.cpp',
     deps = [],
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'charset_converter',
     srcs = 'charset_converter.cpp',
     deps = [
-        '//toft/base/string:string',
+        '//thirdparty/toft/base/string:string',
     ]
 )
 
@@ -59,12 +62,13 @@ proto_library(
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'proto_json_format',
     srcs = 'proto_json_format.cpp',
-    deps = ['//thirdparty/glog:glog',
+    deps = ['#glog',
             '//thirdparty/jsoncpp:jsoncpp',
-            '//thirdparty/protobuf:protobuf',
-            '//toft/base/string:_number',
+            '#protobuf',
+            '//thirdparty/toft/base/string:_number',
            ],
 )
 
@@ -73,7 +77,7 @@ cc_test(
     srcs = 'proto_json_format_unittest.cpp',
     deps = [':proto_json_format',
             ':unittest_proto',
-            '//toft/storage/file:file',
+            '//thirdparty/toft/storage/file:file',
            ],
     testdata = ['debug_string.txt',
                 'json_fast_string.txt',

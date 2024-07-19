@@ -1,27 +1,30 @@
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'file',
     srcs = [
         'file.cpp',
         'local_file.cpp',
     ],
     deps = [
-        '//toft/base/string:string',
-        '//toft/base:class_registry',
-        '//toft/storage/path:path',
-        '//toft/text:wildcard',
+        '//thirdparty/toft/base/string:string',
+        '//thirdparty/toft/base:class_registry',
+        '//thirdparty/toft/storage/path:path',
+        '//thirdparty/toft/text:wildcard',
     ],
     link_all_symbols=True
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'uri_utils',
     srcs = ['uri_utils.cpp'],
     deps = [
-        '//toft/base/string:string',
+        '//thirdparty/toft/base/string:string',
     ]
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'hdfs_fs',
     srcs = 'hdfs_file.cpp',
     deps = [
@@ -34,6 +37,7 @@ cc_library(
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'afs_fs',
     srcs = 'dfs_file.cpp',
     deps = [
@@ -58,6 +62,7 @@ cc_test(
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'mock_file',
     srcs = [
         'mock_file.cpp',

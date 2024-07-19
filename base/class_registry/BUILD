@@ -1,4 +1,5 @@
 cc_library(
+    visibility = ['PUBLIC'],
     name = '_class_registry',
     srcs = 'class_registry.cpp'
 )

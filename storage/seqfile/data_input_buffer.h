@@ -10,7 +10,7 @@
 #include <cstring>
 #include <string>
 
-#include "thirdparty/glog/logging.h"
+#include "glog/logging.h"
 #include "toft/storage/file/file.h"
 
 namespace toft {

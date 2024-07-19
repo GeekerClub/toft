@@ -1,4 +1,5 @@
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'container',
     deps = [
         ':bitmap',
@@ -7,10 +8,11 @@ cc_library(
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'bitmap',
     srcs = 'bitmap.cpp',
     deps = [
-        '//toft/base/string:string',
+        '//thirdparty/toft/base/string:string',
     ]
 )
 
@@ -21,12 +23,13 @@ cc_test(
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'bloom_filter',
     srcs = 'bloom_filter.cpp',
     deps = [
-        '//toft/base/string:string',
-        '//toft/base/:uint32_divisor',
-        '//toft/hash:hash',
+        '//thirdparty/toft/base/string:string',
+        '//thirdparty/toft/base/:uint32_divisor',
+        '//thirdparty/toft/hash:hash',
     ]
 )
 
@@ -37,7 +40,7 @@ cc_test(
     ],
     deps = [
         ':bloom_filter',
-        '//toft/system/time:time'
+        '//thirdparty/toft/system/time:time'
     ]
 )
 
@@ -45,9 +48,9 @@ cc_test(
     name = 'skiplist_test',
     srcs = 'skiplist_test.cpp',
     deps = [
-        '//toft/base:arena',
-        '//toft/base:random',
-        '//toft/hash:hash',
+        '//thirdparty/toft/base:arena',
+        '//thirdparty/toft/base:random',
+        '//thirdparty/toft/hash:hash',
     ]
 )
 
@@ -55,8 +58,8 @@ cc_test(
     name = 'lru_cache_test',
     srcs = ['lru_cache_test.cpp'],
     deps = [
-        '//toft/system/threading:threading',
-        '//toft/system/time:time',
+        '//thirdparty/toft/system/threading:threading',
+        '//thirdparty/toft/system/time:time',
     ],
 )
 
@@ -66,19 +69,20 @@ cc_test(
         'blocking_queue_test.cpp',
     ],
     deps = [
-        '//toft/system/threading:_sync_object',
-        '//toft/system/threading:_thread',
+        '//thirdparty/toft/system/threading:_sync_object',
+        '//thirdparty/toft/system/threading:_thread',
     ]
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'counter',
     srcs = [ 
         'counter.cc'
     ],  
     deps = [ 
-        '//toft/system/threading:threading',
-        '//toft/system/timer:timer'
+        '//thirdparty/toft/system/threading:threading',
+        '//thirdparty/toft/system/timer:timer'
     ]   
 )
 
@@ -87,8 +91,8 @@ cc_test(
     srcs = 'counter_test.cc',
     deps = [ 
         ':counter',
-        '//thirdparty/gtest:gtest',
-        '//thirdparty/gflags:gflags',
-        '//thirdparty/glog:glog'
+        '#gtest',
+        '#gflags',
+        '#glog'
     ]   
 )

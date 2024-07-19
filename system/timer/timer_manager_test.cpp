@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-#include "thirdparty/gtest/gtest.h"
+#include "gtest/gtest.h"
 
 #include "toft/system/threading/event.h"
 

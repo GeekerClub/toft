@@ -1,4 +1,5 @@
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'wildcard',
     srcs = 'wildcard.cpp'
 )

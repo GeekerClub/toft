@@ -1,4 +1,5 @@
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'ip_address',
     srcs = [
         'ip_address.cpp'
@@ -6,24 +7,28 @@ cc_library(
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'socket',
     srcs = 'socket.cpp',
     deps = ':socket_address'
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'domain_resolver',
     srcs = 'domain_resolver.cpp',
     deps = ':ip_address'
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'socket_address',
     srcs = 'socket_address.cpp',
     deps = ':ip_address'
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'net',
     deps = [
         ':domain_resolver',
@@ -56,7 +61,7 @@ cc_test(
     srcs = 'socket_test.cpp',
     deps = [
         ':socket',
-        '//toft/system/threading:threading'
+        '//thirdparty/toft/system/threading:threading'
     ]
 )
 

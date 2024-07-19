@@ -4,7 +4,7 @@
 // Author: An Qin (anqin.qin@gmail.com)
 
 #include "toft/compress/block/gzip.h"
-#include "thirdparty/glog/logging.h"
+#include "glog/logging.h"
 namespace toft {
 GzipCompression::GzipCompression() :
     m_zlib_deflate_stream(NULL), m_zlib_inflate_stream(NULL),

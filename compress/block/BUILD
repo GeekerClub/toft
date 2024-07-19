@@ -5,68 +5,75 @@
 #   TODO(shunpingye): describe this package.
 
 cc_library(
+    visibility = ['PUBLIC'],
     name='_block_compression',
     srcs=['block_compression.cpp', ],
     deps=[
-        '//toft/base/string:string',
+        '//thirdparty/toft/base/string:string',
     ],
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name='snappy',
     srcs=['snappy.cpp', ],
     deps=[
         ':_block_compression',
-        '//toft/base:class_registry',
+        '//thirdparty/toft/base:class_registry',
         '//thirdparty/snappy:snappy',
     ],
     link_all_symbols=True,
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name='lzo',
     srcs=['lzo.cpp', ],
     deps=[
         ':_block_compression',
-        '//toft/base:class_registry',
+        '//thirdparty/toft/base:class_registry',
         '//thirdparty/lzo:lzo',
     ],
     link_all_symbols=True,
 )
 
 #cc_library(
+    visibility = ['PUBLIC'],
 #    name='quicklz',
 #    srcs=['quicklz.cpp', ],
 #    deps=[
 #        ':_block_compression',
-#        '//toft/base:class_registry',
+#        '//thirdparty/toft/base:class_registry',
 #        '//thirdparty/quicklz:quicklz',
 #    ],
 #    link_all_symbols=True,
 #)
 
 cc_library(
+    visibility = ['PUBLIC'],
     name='gzip',
     srcs=['gzip.cpp', ],
     deps=[
         ':_block_compression',
-        '//toft/base:class_registry',
+        '//thirdparty/toft/base:class_registry',
         '#z',
     ],
     link_all_symbols=True,
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'none',
     srcs = 'none.cpp',
     deps=[
         ':_block_compression',
-        '//toft/base:class_registry',
+        '//thirdparty/toft/base:class_registry',
     ],
     link_all_symbols=True,
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name='block',
     deps=[
         ':lzo',
@@ -79,13 +86,14 @@ cc_library(
 
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'stream_compression',
     srcs = [
         'stream_compression.cc'
     ],
     deps = [
         ':block',
-        '//toft/system/threading:threading'
+        '//thirdparty/toft/system/threading:threading'
     ]
 )
 
@@ -104,6 +112,6 @@ cc_test(
     srcs = 'stream_compression_test.cc',
     deps = [
         ':stream_compression',
-        '//toft/storage/file:file'
+        '//thirdparty/toft/storage/file:file'
     ]
 )

@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "thirdparty/gtest/gtest.h"
+#include "gtest/gtest.h"
 
 namespace toft {
 

@@ -5,7 +5,7 @@
 
 #include "toft/compress/block/lzo.h"
 
-#include "thirdparty/glog/logging.h"
+#include "glog/logging.h"
 #include "thirdparty/lzo/lzo1x.h"
 
 namespace {

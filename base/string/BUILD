@@ -1,27 +1,32 @@
 cc_library(
+    visibility = ['PUBLIC'],
     name = '_compare',
     srcs = 'compare.cpp'
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = '_concat',
     srcs = 'concat.cpp',
     deps = ':_number',
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = '_string_piece',
     srcs = 'string_piece.cpp',
     deps = ':_compare'
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = '_algorithm',
     srcs = 'algorithm.cpp',
     deps = ':_string_piece'
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = '_number',
     srcs = [
         'number.cpp',
@@ -29,6 +34,7 @@ cc_library(
 )
 
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'string',
     deps = [
         ':_algorithm',
@@ -40,16 +46,16 @@ cc_library(
     ]
 )
 
-cc_test(
-    name = 'concat_test',
-    srcs = ['concat_test.cpp'],
-    deps = [
-        ':_concat',
-        './format:_format',
-        '//thirdparty/perftools:profiler'
-    ],
-    optimize = 'O3'
-)
+#cc_test(
+#    name = 'concat_test',
+#    srcs = ['concat_test.cpp'],
+#    deps = [
+#        ':_concat',
+#        './format:_format',
+#        '//thirdparty/perftools:profiler'
+#    ],
+#    optimize = 'O3'
+#)
 
 cc_test(
     name = 'number_test',

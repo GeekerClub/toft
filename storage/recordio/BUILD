@@ -1,11 +1,12 @@
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'recordio',
     srcs = [
         'recordio.cc',
         'reverse_recordio.cc'
     ],
     deps = [
-        '//toft/storage/file:file',
+        '//thirdparty/toft/storage/file:file',
         '//thirdparty/protobuf:protobuf'
     ]
 )

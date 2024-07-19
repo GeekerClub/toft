@@ -6,7 +6,7 @@
 // Description: static resource test
 
 #include "toft/base/static_resource.h"
-#include "thirdparty/gtest/gtest.h"
+#include "gtest/gtest.h"
 
 namespace toft {
 

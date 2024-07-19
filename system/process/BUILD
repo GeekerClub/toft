@@ -1,4 +1,5 @@
 cc_library(
+    visibility = ['PUBLIC'],
     name = 'process',
     srcs = [
         'process_local_const.cpp',
@@ -6,10 +7,10 @@ cc_library(
         'this_process.cpp',
     ],
     deps = [
-        '//toft/encoding:encoding',
-        '//toft/storage/file:file',
-        '//toft/system/threading:_this_thread',
-        '//toft/system/time:time',
+        '//thirdparty/toft/encoding:encoding',
+        '//thirdparty/toft/storage/file:file',
+        '//thirdparty/toft/system/threading:_this_thread',
+        '//thirdparty/toft/system/time:time',
     ]
 )
 

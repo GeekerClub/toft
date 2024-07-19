@@ -3,7 +3,7 @@
 //
 // Author: CHEN Feng <phongchen@tencent.com>
 
-#include "thirdparty/gtest/gtest.h"
+#include "gtest/gtest.h"
 #include "toft/crypto/random/true_random.h"
 
 // namespace common {

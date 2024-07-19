@@ -1,4 +1,5 @@
 cc_library(
+    visibility = ['PUBLIC'],
     name = '_format',
     srcs = [
         'print.cpp',
@@ -11,8 +12,8 @@ cc_library(
         'vscan.cpp',
     ],
     deps = [
-        '//thirdparty/glog:glog',
-        '//toft/base/string/:_number'
+        '#glog',
+        '//thirdparty/toft/base/string/:_number'
     ],
     extra_cppflags = '-Wno-format-nonliteral'
 )
@@ -26,10 +27,10 @@ cc_test(
 cc_test(
     name = 'print_test',
     srcs = 'print_test.cpp',
-    optimize = 'O3',
+#    optimize = 'O3',
     deps = [
         ':_format',
-        '//thirdparty/perftools:profiler'
+        #'//thirdparty/perftools:profiler'
     ]
 )
 

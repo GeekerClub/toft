@@ -6,7 +6,7 @@
 // Description:
 
 #include "toft/net/http/http_request.h"
-#include "thirdparty/gtest/gtest.h"
+#include "gtest/gtest.h"
 
 namespace toft {
 

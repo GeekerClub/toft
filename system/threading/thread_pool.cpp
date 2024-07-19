@@ -5,7 +5,7 @@
 
 #include "toft/system/threading/thread_pool.h"
 
-#include "thirdparty/glog/logging.h"
+#include "glog/logging.h"
 
 #include "toft/system/threading/this_thread.h"
 
