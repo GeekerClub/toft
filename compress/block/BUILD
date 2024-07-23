@@ -38,7 +38,7 @@ cc_library(
 )
 
 #cc_library(
-    visibility = ['PUBLIC'],
+#    visibility = ['PUBLIC'],
 #    name='quicklz',
 #    srcs=['quicklz.cpp', ],
 #    deps=[
